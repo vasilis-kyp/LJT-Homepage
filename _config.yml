@@ -49,7 +49,7 @@ publication_category:
 teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews
 breadcrumbs              : false
 words_per_minute         : 160
-futre                   : true
+future                   : true
 read_more                : "disabled"
 talkmap_link             : false
 comments:
@@ -70,7 +70,7 @@ staticman:
     date:
       type               : "date"
       options:
-        format           : "is08601"
+        format           : "iso8601"
 
 # SEO Related
 google_site_verification :
@@ -121,7 +121,7 @@ exclude:
   - Gemfile
   - Gruntfile.js
   - gulpfile.js
-  - LIENSE
+  - LICENSE
   - local
   - log
   - node_modules
@@ -138,7 +138,7 @@ markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
 # Conversion
 markdown: kramdown
-highlightr: rouge
+highlighter: rouge
 lsi: false
 excerpt_separator: "\n\n"
 incremental: false
@@ -148,11 +148,11 @@ kramdown:
   input: GFM
   hard_wrap: false
   auto_ids: true
-  footote_nr: 1
+  footnote_nr: 1
   entity_output: as_char
   toc_levels: 1..6
-  smart_quotes: lsqo,rsqo,ldqo,rdqo
-  enble_coderay: false
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
 
 # These settings control the types of collections used by the template
 collections:
@@ -162,7 +162,7 @@ collections:
   publications:
     output: true
     permalink: /:collection/:path/
-  portolio:
+  portfolio:
     output: true
     permalink: /:collection/:path/
   talks:
@@ -170,12 +170,12 @@ collections:
     permalink: /:collection/:path/
 
 # These settings control how pages and collections are included in the site
-defalts:
+defaults:
   # _posts
   - scope:
       path: ""
       type: posts
-    valuse:
+    values:
       layout: single
       author_profile: true
       read_time: true
@@ -186,14 +186,14 @@ defalts:
   - scope:
       path: ""
       type: pages
-    valuse:
+    values:
       layout: single
       author_profile: true
   # _teaching
   - scope:
       path: ""
       type: teaching
-    valuse:
+    values:
       layout: single
       author_profile: true
       share: true
@@ -202,16 +202,16 @@ defalts:
   - scope:
       path: ""
       type: publications
-    valuse:
+    values:
       layout: single
       author_profile: true
       share: true
       comments: true
-  # _portolio
+  # _portfolio
   - scope:
       path: ""
-      type: portolio
-    valuse:
+      type: portfolio
+    values:
       layout: single
       author_profile: true
       share: true
@@ -220,7 +220,7 @@ defalts:
   - scope:
       path: ""
       type: talks
-    valuse:
+    values:
       layout: talk
       author_profile: true
       share: true
@@ -239,8 +239,8 @@ plugins:
   - jekyll-feed
   - jekyll-gist
   - jekyll-paginate
-  - jeyll-sitemap
-  - jeyll-redirect-from
+  - jekyll-sitemap
+  - jekyll-redirect-from
   - jemoji
 
 # Mimic GitHub Pages with --safe
@@ -248,21 +248,20 @@ whitelist:
   - jekyll-feed
   - jekyll-gist
   - jekyll-paginate
-  - jeyll-sitemap
-  - jeyll-redirect-from
+  - jekyll-sitemap
+  - jekyll-redirect-from
   - jemoji
 
-# Archies
-cateory_archieve:
+# Archives
+category_archive:
   type: liquid
-  path: /cateories/
-tag_archieve:
+  path: /categories/
+tag_archive:
   type: liquid
   path: /tags/
 
-# HTM Compression
-# - https://jch.penibelst.de/
-compress_htm:
-  clips: all
+# HTML Compression
+compress_html:
+  clippings: all
   ignore:
     envs: development
